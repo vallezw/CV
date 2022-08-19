@@ -1,0 +1,98 @@
+\documentclass[11pt, a4paper]{moderncv}
+
+\newcommand{\en}[1]{#1}
+\newcommand{\de}[1]{}
+
+\en{\usepackage[english]{babel}}
+\de{\usepackage[ngerman]{babel}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[left=1.7cm, right=1.7cm, top=1.0cm, bottom=1.0cm, scale=0.8]{geometry}
+% \usepackage{fontawesome}
+
+% source: https://tex.stackexchange.com/a/294990/271172
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+\renewcommand{\link}[2]{\href{#1}{#2 \ExternalLink}}
+
+
+\newcommand{\quotes}[1]{\en{``#1''}\de{\glqq{}#1\grqq{}}}
+\renewcommand*{\namefont}{\fontsize{20}{22}\mdseries\upshape}
+
+\moderncvtheme[blue]{classic}
+\moderncvicons{awesome}
+ 
+\name{Valentin}{Zwerschke}
+\title{\en{CV}\de{Lebenslauf}}
+% \address{...}{}
+\phone[mobile]{+49\,1520\,2963975}
+\email{v.zwerschke@mail.de}
+\social[github][github.com/vallezw]{vallezw}
+% \social[linkedin][...]{Valentin Zwerschke}
+% \photo[2.5cm]{images/photo}
+ 
+\begin{document}
+\vspace*{-10mm}
+\makecvtitle
+\vspace*{-13mm}
+
+\section{\en{Personal}\de{Persönliche Daten}}
+\cvline{\en{born}\de{geboren}}{16.07.2006, Stuttgart}
+
+\section{Ausbildung}
+\cventry{2016-2024}{Gymnasium}{Königin-Olga-Stift}{Stuttgart}{Teilnahme an der Homepage AG}{Leistungskurse: Mathe, Physik, Musik}
+
+\section{Berufserfahrung}
+\cventry{April 2022}{BOGY Parktikum bei Quanos}{Script fuer den Build Prozess geschrieben und Feature Implementation}{}{}{}
+\cventry{2020}{Freiberuflicherfahrung mit Websiten}{}{}{}{}
+\cvitem{2019}{Discord Bot Programmierung auf Fiverr}{In dieser Zeit hatte ich mich erstmals mit Freiberuflichen Aktivitaeten beschäftigt.}{}{}{}
+
+
+\section{Programmierkenntnisse}
+\cvcomputer{Sprachen}{JavaScript, Go, Python, Java, Bash, SQL, LaTeX}{Technologien}{Linux, React, React Native, Express.js, Flask, Docker, Git, CI/CD}
+
+\section{Open Source Projekte}
+\cvlistitem{\link{https://github.com/SheetAble/SheetAble}{\textbf{SheetAble}}: 
+            {SheetAble ist eine Musiknoten-organisierer Software. Es beinhaltet eine tablet App fuer iPadOS sowie Android und eine Webapp + Server mit React und Golang.}}
+\cvlistitem{\link{https://github.com/vallezw/Image-Uploader}{\textbf{Image Uploader}}: 
+            \en{An open source self hosted dockerized image uploader, React + Express.}
+            \de{Ein open source selbst gehosteter Bilduploadservice mit Docker Unterstützung, React + Express.}}
+\cvlistitem{\link{https://github.com/vallezw/The-Social-Network}{\textbf{The Social Network}}: 
+            \en{A Twitter like Social Network made with React and Firebase.}
+            \de{Ein Twitter-ähnliches soziales Netzwerk mit React und Firebase gemacht.}}
+
+
+\section{\en{Languages}\de{Sprachen}}
+% use \cvcomputer for multi column descriptions
+\cvcomputer{\en{German}\de{Deutsch}}{\en{Native}\de{Muttersprache}}
+           {\en{English}\de{Englisch}}{\en{Fluent}\de{Fließend}}
+\cvcomputer{\en{French}\de{Französisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}
+           {\en{Russian}\de{Russisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}
+
+\section{\en{Hobbys}\de{Hobbys, Interessen}}
+\cvlistdoubleitem{\en{Piano}\de{Klavier}}{}
+\cvlistdoubleitem{\en{Video games}\de{Videospiele}}{}
+
+\emptysection{}\closesection
+\vfill
+Valentin Zwerschke\\
+Stuttgart, \today
+\end{document}
