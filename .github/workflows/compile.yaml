@@ -16,6 +16,11 @@ jobs:
         with:
           root_file: cv.tex
           args: -jobname=german
+      - name: Compile LaTeX document (Musik)
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv_musik.tex
+          args: -jobname=german
       - name: Upload LaTeX document
         uses: actions/upload-artifact@v3
         with: 

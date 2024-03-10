@@ -1,0 +1,101 @@
+\documentclass[11pt, a4paper]{moderncv}
+
+\usepackage{ifthen}
+
+\ifthenelse{\equal{\detokenize{english}}{\jobname}}{
+    \newcommand{\de}[1]{}
+    \newcommand{\en}[1]{#1}
+}{
+    \newcommand{\de}[1]{#1}
+    \newcommand{\en}[1]{}
+}
+
+\en{\usepackage[english]{babel}}
+\de{\usepackage[ngerman]{babel}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[left=1.7cm, right=1.7cm, top=1.0cm, bottom=1.0cm, scale=0.8]{geometry}
+% \usepackage{fontawesome}
+
+% source: https://tex.stackexchange.com/a/294990/271172
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+\renewcommand{\link}[2]{\href{#1}{#2 \ExternalLink}}
+
+
+\newcommand{\quotes}[1]{\en{``#1''}\de{\glqq{}#1\grqq{}}}
+\renewcommand*{\namefont}{\fontsize{20}{22}\mdseries\upshape}
+
+\moderncvtheme[blue]{classic}
+\moderncvicons{awesome}
+ 
+\name{Valentin}{Zwerschke}
+\title{\en{CV}\de{Lebenslauf}}
+% \address{...}{}
+\email{vallezw@gmail.com}
+% \social[github][github.com/vallezw]{vallezw}
+ 
+\begin{document}
+\vspace*{-10mm}
+\makecvtitle
+\vspace*{-13mm}
+
+\section{\en{Personal}\de{Persönliche Daten}}
+\cvline{\en{born}\de{geboren}}{16.07.2006, Stuttgart}
+
+\section{\en{Education}\de{Ausbildung}}
+\cventry{2016-2024}{Gymnasium}{Königin-Olga-Stift}{Stuttgart}{}{\en{Majors: Mathematics, Physics, Music}\de{Leistungskurse: Musik, Mathematik, Physik}}
+
+\section{\en{Competitions}\de{Wettbewerbe}}
+\cventry{2023, 2024}{International Physik Olympiade}{Erfolgreiche Teilnahme 1. Runde}{}{}{}
+\cventry{2022}{Bundeswettbewerb Mathematik}{\en{1st Round: 3rd Price}\de{1. Runde: Dritter Preis}}{}{}{}
+\cventry{2020}{Jugendwettbewerb Informatik}{\en{1st, 2nd, 3rd Round: 1st Price}\de{1., 2., 3. Runde: Erster Preis}}{}{}{}
+\cventry{2019}{Informatik Biber}{\en{1st Price}\de{Erster Preis}}{}{}{}
+
+
+\section{\en{Work Experience}\de{Berufserfahrung}}
+\cventry{2023-2024}{Werkschüler, QuantCo}{Full-Stack Development (15 Stunde p.W.)}{}{}{}
+\cventry{April 2022}{BOGy Praktikum, Quanos}{\en{Full-Stack feature implementation and DevOps experience}\de{Full-Stack Feature Implementation}}{}{}{}
+
+
+\section{Musik}
+\cventry{2012-2019, 2022-2023}{Klavierunterricht}{bei Alla Grebenzowa}{}{}{}
+\cventry{September 2023-2024}{Klavierunterricht}{bei Felix Romankiewicz}{}{}{}
+\cventry{2022-2024}{Musik Leistungskurs}{am Eberhard-Ludwigs-Gymnasium bei Dirk Siegel}{}{}{}
+
+\section{\en{Languages}\de{Sprachen}}
+% use \cvcomputer for multi column descriptions
+\cvcomputer{\en{German}\de{Deutsch}}{\en{Native}\de{Muttersprache}}
+           {\en{English}\de{Englisch}}{\en{Fluent}\de{Fließend}}
+\cvcomputer{\en{French}\de{Französisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}
+           {\en{Russian}\de{Russisch}}{\en{Basic}\de{Grundlegende Kenntnisse}}
+
+\section{\en{Hobbys}\de{Hobbys, Interessen}}
+\cvlistdoubleitem{\en{Piano}\de{Klavier}}{}
+\cvlistitem{Programmieren (z.B. \textbf{SheetAble}, Organisationssoftware für Musiknoten.)}
+\cvlistdoubleitem{Skifahren, Fitness}{}
+
+
+\emptysection{}\closesection
+\vfill
+Valentin Zwerschke\\
+Stuttgart, \today
+\end{document}
