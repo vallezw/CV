@@ -1,5 +1,8 @@
 #import "@preview/moderner-cv:0.1.0": *
 
+#show link: underline
+
+  
 #show: moderner-cv.with(
   name: "Valentin Zwerschke",
   lang: "en",
@@ -63,6 +66,20 @@
   title: [BOGy Internship],
   [#linebreak()#text(10pt, "Full-Stack Feature Implementation and DevOps Experience")],
 )
+
+
+= Projects
+#cv-entry(
+  date: [2022-2023],
+  employer: [is a music sheets organizer software. It includes a tablet app for iPadOS/Android and a webapp + server written with React and Golang (#link("https://sheetable.net")[sheetable.net])],
+  title: [#link("https://sheetable.net")[SheetAble]], 
+)
+#cv-entry(
+  date: [2022-2024],
+  employer: [More projects can be found on my #link("github.com/vallezw")[GitHub] (github.com/vallezw)],
+  title: [More Projects], 
+)
+
 
 = Programming Skills
 
