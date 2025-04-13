@@ -7,6 +7,7 @@
     email: "vallezw@gmail.com",
     github: "vallezw",
     linkedin: "vallezw",
+    homepage: "vallezw.com"
   ),
 )
 
@@ -16,7 +17,16 @@
 
 
 = Bildung
-
+#cv-entry(
+  date: [2024 -- 2025],
+  title: [B.Sc. Mathematics],
+  employer: [Technische Universität München (TUM)],
+)
+#cv-entry(
+  date: [2024 -- 2025],
+  title: [B.Sc. Computer Science],
+  employer: [Technische Universität München (TUM)],
+)
 #cv-entry(
   date: [2016 -- 2024],
   title: [Gymanasium],
@@ -64,19 +74,19 @@
   [#linebreak()#text(10pt, "Full-Stack Feature Implementation und DevOps Erfahrung")],
 )
 
-= Programmierung Fähigkeiten
+// = Programmierung Fähigkeiten
 
-#cv-double-item[
-  Sprachen
-][
-  TypeScript/JavaScript, Go, Python, Java, SQL, Bash, LaTeX/Typst
-][
-  Technologien
-][
-  Linux, React, React Native, TailwindCSS
-  Express.js, Flask, Docker, Git, GitHub Actions,
-  CI/CD, 
-]
+// #cv-double-item[
+//   Sprachen
+// ][
+//   TypeScript/JavaScript, Go, Python, Java, SQL, Bash, LaTeX/Typst
+// ][
+//   Technologien
+// ][
+//   Linux, React, React Native, TailwindCSS
+//   Express.js, Flask, Docker, Git, GitHub Actions,
+//   CI/CD, 
+// ]
 
 = Sprachen
 
@@ -85,5 +95,5 @@
 
 = Hobbies
 
-#cv-list-double-item[OSS Programmierung][Klavier, Musik Theorie]
+#cv-list-double-item[OSS Programmierung][Klavier]
 #cv-list-item[Ski, Fitness, Fahrradfahren]

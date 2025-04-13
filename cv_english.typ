@@ -1,8 +1,14 @@
 #import "@preview/moderner-cv:0.1.0": *
 
 #show link: underline
-
   
+  
+#set page(
+ width: 3cm,
+ height: 4cm,
+ margin: (x: 1pt, y: 4pt),
+)
+
 #show: moderner-cv.with(
   name: "Valentin Zwerschke",
   lang: "en",
@@ -10,7 +16,8 @@
     email: "vallezw@gmail.com",
     github: "vallezw",
     linkedin: "vallezw",
-  ),
+    homepage: "vallezw.com",
+  )
 )
 
 = Personal Information
@@ -20,16 +27,22 @@
 
 = Education
 
+
+#cv-entry(
+  date: [2024 -- today],
+  title: [B.Sc. Mathematics, minor Computer Science],
+  employer: [Technische Universität München (TUM)],
+)
+#cv-entry(
+  date: [2025 -- 2028],
+  title: [Music Education, major Piano],
+  employer: [HMTM (Hochschule für Musik und Theater München)],
+)
 #cv-entry(
   date: [2016 -- 2024],
   title: [Gymanasium],
   employer: [Königin-Olga-Stift],
 )[Abitur: 1.8 #linebreak() majored in Maths, Music and Physics]
-#cv-entry(
-  date: [2012 -- 2016],
-  title: [Primary School],
-  employer: [Franz-Schubert-Schule],
-)[Stuttgart]
 
 = Competitions
 #cv-entry(
@@ -47,15 +60,10 @@
   employer: [1st, 2nd, 3rd round: 1st price],
   title: [Computer Science Youth Competition (JwInf)], 
 )
-#cv-entry(
-  date: [2019],
-  employer: [1st price],
-  title: [Computer Science Beaver Competition], 
-)
 
 = Experience
 #cv-entry(
-  date: [2023 -- 2024],
+  date: [2023 -- 2025],
   employer: [QuantCo],
   title: [Working Student],
   [#linebreak()#text(10pt, "Full-Stack Development (15 hours p.W.)")],
@@ -82,17 +90,14 @@
 
 
 = Programming Skills
-
 #cv-double-item[
   Languages
 ][
-  TypeScript/JavaScript, Go, Python, Java, SQL, Bash, LaTeX/Typst
+  TypeScript/JavaScript, Go, Python, Java, SQL, Bash, Typst
 ][
   Technologies
 ][
-  Linux, React, React Native, TailwindCSS
-  Express.js, Flask, Docker, Git, GitHub Actions,
-  CI/CD, 
+  Linux, React, React Native, TailwindCSS, Elysia.js, Drizzle, Docker, Git, GitHub Actions
 ]
 
 = Languages
@@ -102,5 +107,4 @@
 
 = Hobbies
 
-#cv-list-double-item[OSS Programming][Piano, Music theory]
-#cv-list-item[Ski, Lifting]
+#cv-list-double-item[Ski, Lifting][Piano]
